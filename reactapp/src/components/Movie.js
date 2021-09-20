@@ -85,7 +85,6 @@ function Movie(props) {
   // Etape 3 : Revenir à une moyenne en divisant par le nombre total de votes (en prenant en compte le nouveau vote) dont 4 au total.
   // 29,6  / (3 +1) = 7,4
   const newGlobalRating = Math.round((globalCountRating * props.globalRating + myRatingMovie)/globalCountRating);
-  //console.log(newGlobalRating);
 
   // on met la couleur sur les étoiles pour myRating et pour myRatingMovie
   let tabMyRating = [];
@@ -125,7 +124,7 @@ function Movie(props) {
           </div>
           <div>Moyenne
           {tabGlobalRating}
-          ({newGlobalRating})
+          ({globalCountRating})
         </div>
         <CardTitle className="mt-3" tag="p">{props.movieName}</CardTitle>
         <CardText>{props.movieDesc}</CardText>
